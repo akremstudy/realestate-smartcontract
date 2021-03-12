@@ -69,13 +69,13 @@
               <legend><span class="number">2.</span> Property Transfer Profile </legend>
               
                 <label> Seller First Name: </label>
-                <input class="input-medium" type = "text" name = "seller_fname" id = "seller_fname" readonly />
+                <input class="heighttext" type = "text" name = "seller_fname" id = "seller_fname" readonly />
               
                 <label> &nbsp;&nbsp;&nbsp;&nbsp;Seller Last Name: </label>
-                <input class="input-medium" type = "text" name = "seller_lname" id = "seller_lname" readonly/>
+                <input class="heighttext" type = "text" name = "seller_lname" id = "seller_lname" readonly/>
                 
                 <label for="type">&nbsp;&nbsp;Property type:</label>
-                <input class="input-medium" type="text" id="type" name="type" readonly>
+                <input class="input-long" type="text" id="type" name="type" readonly>
                 <br>
                 <br>
                 
@@ -105,46 +105,50 @@
             <legend><span class="number">3.</span> Seller Transaction Input (Required)</legend>    
             
               <label>Seller Wallet Address:</label>
-              <input class="input-long" type="text" id="wallet" maxlength="42" name="user_wallet" 
-                placeholder=" 0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" required>
+              <input class="input-long" type="text" id="seller_wallet" maxlength="42" name="seller_wallet" 
+                value=" 0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" required>
               <label display="inline">&nbsp;&nbsp;&nbsp;&nbsp;Seller Email:</label>
               <input class="input-long" type="text" id="email" maxlength="30" name="email" 
-                placeholder=" FinTech@gmail.com" required>
+                value=" FinTech@gmail.com" required>
               <br>
               <br>
               <label for="purchaseprice">Purchase Price: &nbsp;$</label>
-              <input class="heighttext" type="number" id="purchaseprice" name="purchasePrice" required>
+              <input class="heighttext" type="text" id="purchaseprice" name="purchasePrice" value="100,000" required>
 
               <label for="purchaseprice">&nbsp;&nbsp;&nbsp;Pro-rated taxes to buyer: &nbsp;$</label>
-              <input class="heighttext" type="number" id="tax" name="tax" required>
+              <input class="heighttext" type="text" id="tax" name="tax" value="1,500" required>
 
               <label for="purchaseprice">&nbsp;&nbsp;&nbsp;Closing costs to buyer: &nbsp;$</label>
-              <input class="heighttext" type="number" id="closing" name="closing" required>
+              <input class="heighttext" type="text" id="closing" name="closing" value="500" required>
               <br>
               <br>
               
               <label for="deposit">Deposit Amount: $</label>
-              <input class="heighttext" type="number" id="deposit" name="user_deposit" required></input>
+              <input class="heighttext" type="text" id="deposit" name="deposit" value="3,000" required></input>
 
-              <label for="deposit">&nbsp;&nbsp;&nbsp;&nbsp;Deposit Due Date: </label>
-              <input class="heighttext" type="date" id="deposit" name="deposit" required></input>
-              <label> &nbsp;&nbsp;by 11:59pm</label>
+              <label for="deposit_due">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Deposit Due Date: </strong></label>
+              <input class="heighttext" type="date" id="deposit_due" name="deposit_due" value="3/16/2021" required></input>
+              <label> &nbsp;&nbsp;<strong>by 11:59pm</strong></label>
+
+              <label>&nbsp;&nbsp;&nbsp;&nbsp;<strong>--> &nbsp;&nbsp;&nbsp;Property Transfer Date:</strong> </label>
+              <input class="heighttext" type="date" id="transfer_date" name="transfer_date" value="5/11/2021" required></input>
+              <label> &nbsp;&nbsp;<strong>by 11:59pm</strong></label>
               <br>
               <br>
 
-              <label for="deposit">Total Due From Buyer on Final Transfer: $</label>
-              <input class="heighttext" type="number" id="deposit" name="user_deposit" required></input>
+              <label for="final_amount">Total Due From Buyer on Final Transfer: $</label>
+              <input class="heighttext" type="text" id="final_amount" name="final_amount" value="95,000" required></input>
 
-              <label for="wallet">&nbsp;&nbsp;&nbsp;&nbsp;Buyer Wallet Address:</label>
-              <input class="input-long" type="text" id="wallet" name="user_wallet" 
-              placeholder="  0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" maxlength="42" required><br>
+              <label for="buyer_wallet">&nbsp;&nbsp;&nbsp;&nbsp;Buyer Wallet Address:</label>
+              <input class="input-long" type="text" id="buyer_wallet" name="buyer_wallet" 
+              value="  0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" maxlength="42" required><br>
               <br>
 
              
               <br>
             
-              <input class="checkbox" type="checkbox" id ="submit" value="submit" name="user_submit" 
-                style="width:20px; height:20px;" required><label for="confirm" class="light"> I certify that the information on this page 
+              <input class="checkbox" type="checkbox" id ="submit" value="submit" name="user_submit" required>
+              <label for="confirm" class="light"> I certify that the information on this page 
                 is true and complete and that I am lawfully authorized to execute this token transfer. I understand that, when I click 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Initiate Property Sale</strong>, the transfer will be initiated and will proceed toward a final token transfer when all conditions have been met.</label><br>
                 <br>
@@ -176,7 +180,7 @@
 
     <footer>
       <br>
-      <p style="text-align: center;" font-size: 12px;> © 2021 #realestateRevolution </p>
+      <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
     </footer>
     </body>
 </html>
