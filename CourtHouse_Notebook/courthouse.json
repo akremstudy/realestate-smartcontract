@@ -60,6 +60,80 @@
 		"inputs": [
 			{
 				"indexed": false,
+				"internalType": "uint256",
+				"name": "date",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "deposit_deadline",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "closing_date",
+				"type": "uint256"
+			}
+		],
+		"name": "Deadlines",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "token_id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "property_owner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "property_address",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum CourtHouse.STATE",
+				"name": "for_sale",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "date",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "token_uri",
+				"type": "string"
+			}
+		],
+		"name": "ForSale",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
 				"internalType": "enum CourtHouse.STATE",
 				"name": "Sold_Property",
 				"type": "uint8"
@@ -79,7 +153,7 @@
 			{
 				"indexed": false,
 				"internalType": "string",
-				"name": "report_uri",
+				"name": "uri",
 				"type": "string"
 			}
 		],
@@ -117,11 +191,42 @@
 			{
 				"indexed": false,
 				"internalType": "string",
-				"name": "report_uri",
+				"name": "uri",
 				"type": "string"
 			}
 		],
 		"name": "Status",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "token_id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "property_owner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "property_address",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "token_uri",
+				"type": "string"
+			}
+		],
+		"name": "Token",
 		"type": "event"
 	},
 	{
@@ -207,11 +312,6 @@
 				"internalType": "uint256",
 				"name": "token_id",
 				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "report_uri",
-				"type": "string"
 			}
 		],
 		"name": "askingPrice_balance",
@@ -327,11 +427,6 @@
 			{
 				"internalType": "string",
 				"name": "_uri",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "report_uri",
 				"type": "string"
 			}
 		],
