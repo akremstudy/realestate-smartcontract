@@ -120,7 +120,12 @@
             <label for="buyer_wallet">Buyer Wallet Address:</label>
             <input class="input-long" type="text" id="buyer_wallet" name="buyer_wallet" value="0x28eb113D1432FA8914aE3167b07A35F8d2BaC3A2" readonly>
             
-            <label for="confirm" class="light"> &nbsp;&nbsp; &nbsp;&nbsp; Confirm wallet address </label>
+            <label display="inline">&nbsp;&nbsp;&nbsp;&nbsp;Buyer Email:</label>
+            <input class="input-long" type="text" id="email" maxlength="30" name="email" 
+            value=" BlockChain@gmail.com" required>
+            <br>
+            <br>
+            <label for="confirm" class="light"> Confirm wallet address </label>
             <input class="checkbox" type="checkbox" id ="wallet_confirm" value="wallet_confirm" name="wallet_confirm" required>
             <br>
             
@@ -177,7 +182,8 @@
               <br>
               <br>
               <input type="checkbox" id ="submit" value="submit" name="user_submit"><label for="confirm" class="light"> I certify that the information on this page 
-                  is true and complete and that I am lawfully authorized to execute this token transfer contract. By clicking Submit, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I understand that the contract will be executed and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                  is true and complete and that I am lawfully authorized to execute this token transfer contract. By clicking Submit, 
+                  I understand that the contract will &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be executed and will proceed toward a final token transfer when all conditions have been met.</label><br>
                   <br>
                   <br>
               <!-- Submit formaction telling where the input information will go. -->
